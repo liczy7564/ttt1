@@ -84,6 +84,7 @@ $(document).ready(function(){
     Main_options(num);
     $(".Main_options").animate({scrollTop:0},10)
   });
+
   function Main_options(num) { 
     let i;
     for (i = 0; i < Secondary.length; i++) {
@@ -102,25 +103,32 @@ $(document).ready(function(){
     let value1 = $(this).attr("value");
     day_options(value1);
 
+    dayContainers.forEach(dayContainer => {
+      const containerRect = document.querySelector('.Slide_leftright').getBoundingClientRect();
+
+
     var currentScrollLeft = $('#marker').scrollLeft();
     var targetOffset = $(".day_container[value='"+value1+"']").offset().left;
+    // var ans=currentScrollLeft-containerRect.left+targetOffset;
     var ans=currentScrollLeft-containerRect.left+targetOffset;
 
     $('#marker').animate({scrollLeft: ans}, 500);
+    });
   });
-
   const container = $('.Slide_leftright');
-  const containerRect = document.querySelector('.Slide_leftright').getBoundingClientRect();
   const dayContainers = document.querySelectorAll('.day_container');
 
+  
 
-function detectDayContainerss() {
+
+function day_showelementor() {
   const valuesArray = [];
     dayContainers.forEach(dayContainer => {
         const elementRect = dayContainer.getBoundingClientRect();
-      
+        const containerRect = document.querySelector('.Slide_leftright').getBoundingClientRect();
+    
         if (
-            elementRect.left<= containerRect.right &&
+            elementRect.left<= containerRect.right-40 &&
             elementRect.left>= containerRect.left-90
         ) {
 
@@ -133,22 +141,25 @@ function detectDayContainerss() {
 }
 function day_options(value1,value2) { 
   let i;
-  for (i = 0; i < day_container.length; i++) {
-    // day_option[i].style.color="#B0B0B0"; 
+  for (i = 0; i < day_container.length; i++) { 
     day_option[i].style.color="#D7D0D0"; 
+    }
+  if (value1 !== undefined && value1 !== null) {
+    day_option[value1].style.color="#474032";
   }
-  day_option[value1].style.color="#474032";
   if (value2 !== undefined && value2 !== null) {
     day_option[value2].style.color = "#474032";
   }
 }	
 // 添加点击事件监听器到容器
   container.click(function() {
-    detectDayContainerss();
+    day_showelementor();
   });
   $('#marker').scroll(function() {
-    detectDayContainerss();
+    day_showelementor();
   });
+
+
 
   // 置頂按鈕
   $(function(){

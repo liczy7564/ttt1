@@ -234,19 +234,47 @@ img{
 	color: #333399;
 	font-size: 15px;
 }
+.title_2{
+	color: #339996;
+	font-size: 15px;
+}
+.title_3{
+	color: #339996;
+	font-size: 15px;
+}
+.collapsed.company_item_title{
+	color: #747a99;
+}
+.collapsed.company_item_title::before{
+	content: none;
+}
+.company_item_title{
+	width: 100%;
+    padding: 10px;
+    border: 1px solid #efefef;
+    border-radius: 5px;
+    background: #e6dddd40;
+	color: #997485;
+}
+.company_item_title::before{
+	content: '◇';
+}
+.company_item_title:active::before {
+    content: '☆';
+    color: #997485;
+}
 #marker {
 	display: flex;
 	overflow-x: auto; /* 添加这一行 */
 }
 .day_container {
-	width: 120px;
 	height: 20px;
 	margin: 20px;
 	background-color: #ddd;
 	display: inline-table;
 }
 .day_con{
-	width: 300px;
+	margin-left: 40px;
 }
 
 
@@ -269,7 +297,10 @@ img{
 	margin: 100px 0px 15px 0px;
 	padding: -100px 0px 0px 0px;
 }
-
+.accordion{
+	border: 1px solid #efefef;
+	border-radius: 5px;
+}
 .theme{
 	position: relative;
 	padding: 15px 15px 50px 15px;
@@ -333,6 +364,9 @@ img{
 	.border_type_1{
 		border: 1px solid #423d3d;
 		box-sizing: border-box;
+	}
+	.The_content{
+		width: 83%;
 	}
 } 
 @media (max-width:600px) {  /* 小 */
@@ -494,7 +528,6 @@ img{
     min-height: 200px;
     min-width: 200px;
     height: 20vw;
-    width: 20vw;
 }
 .Activity{
 	width: 83%;
@@ -502,7 +535,6 @@ img{
 	padding: 10px 10px 10px 10px;
 }
 .The_content{
-	width: 83%;
     margin: auto;
 	padding: 10px 10px 10px 10px;
 }
