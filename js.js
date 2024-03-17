@@ -69,7 +69,30 @@ $(document).ready(function(){
       }
     }
   });
-  
+  let ajax_cooperate=document.querySelector(".ajax_cooperate");
+  $.ajax({
+    url:"cooperate.json",
+    success:function(result){
+      for(let i=0;i<result.length;i++){
+        if(result[i]['type_2'] === null){
+          result[i]['type_2'] = "";
+        }
+        if(result[i]['link_2'] === null){
+          result[i]['link_2'] = "";
+        }
+        if(result[i]['link_title_2'] === null){
+          result[i]['link_title_2'] = "";
+        }
+      }
+      for(let i=0;i<result.length;i++){
+      ajax_cooperate.innerHTML+="<div class='cooperate_block'><"+result[i]['media']+" class='cooperate_img'loading='lazy' src='"+
+      result[i]['media_src']+"' style='width: 100%;' alt=''></"+result[i]['media']+"><h6 >"+
+      result[i]['Name']+"</h6><div class='cooperate_contact'><span class='title_2'>"+
+      result[i]['type_1']+"</span><br><a href='"+result[i]['link_1']+"'>"+result[i]['link_title_1']+"</a><br><span class='title_2'>"+
+      result[i]['type_2']+"</span><br><a href='"+result[i]['link_2']+"'>"+result[i]['link_title_2']+"</a><br>"
+      }
+    }
+  });
   $('h2').on("click", function() {
     $('.Main_options_row')[0].scrollIntoView({ behavior: 'smooth', block: 'start' });
 });

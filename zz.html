@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>无限轮播文字</title>
+
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      #wrap {
+        overflow: hidden;
+        position: relative;
+        width: 600px;
+        height: 20px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #cccccc;
+        white-space: nowrap;
+      }
+
+      #slide {
+        position: absolute;
+        animation: slide 10s linear infinite;
+      }
+      .itemA{
+	display:inline-block;
+	width:200px;
+	height:100px;
+	background:pink;
+  }
+      @keyframes slide {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="slide">
+        <span class="itemA">A</span>
+        <span class="itemA">B</span>
+        <span class="itemA">C</span>
+        <span class="itemA">A</span>
+        <span class="itemA">B</span>
+        <span class="itemA">C</span>
+      </div>
+    </div>
+  </body>
+</html>
+
+作者：氢灵子
+链接：https://juejin.cn/post/6941242335443288077
+来源：稀土掘金
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
