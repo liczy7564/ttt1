@@ -360,7 +360,7 @@ img{
 		width: 80%;
 		margin: auto;
 	}
-	.lm_975{
+	.about_Skill_revision{
 		width: 75%;
 		margin: auto;
 	}
@@ -387,9 +387,11 @@ img{
 	.lm_170{
 		width: 100%;
 	}
-	.lm_975{
-		width: 92%;
-		margin: auto;
+	.about_Skill_revision{
+		width: 93%;
+		margin-left: 5%;
+		margin-right: -5%;
+		padding-left:5%;
 	}
 	.tin_bor{
 		border:1px solid #efefef;
