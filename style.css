@@ -131,6 +131,7 @@ img{
 	border-radius: 40.5px;
 	background-color: rgb(255 240 240);
 }
+
 /* -----------icon END---------*/
 /* -------------------about_me----------------- */
 .zz{
@@ -218,35 +219,40 @@ img{
 	border-bottom: solid 3px #921414;
 }
 /* 實習日常 */
-.day_row{
+.work_row{
 	overflow-x: auto;
 	background-color: #FFF;
 	border-bottom:solid 1px #B5B7BB;
 }
-.day_row a{
+.work_row a{
 	color: #8D8D8D;
 }
-.day_row :hover{
-	color: #800000;
+.work_row :hover{
 	font-weight: 700;
 }
 
-.day_options :hover{
-	color: #D7D0D0;
-	border-bottom:3px solid #b65c5e;
-}
-.day_options{
+.work_options{
 	width: 100%;
 	white-space: nowrap;
 	text-align: center;
 	margin: 5px ;
 }
-.day_options .active{
-	text-decoration: none;
-	color: #D7D0D0;
-	border-bottom: solid 3px #be7575;
+.work_block{
+	aspect-ratio: 4 / 3; 
+	object-position: center center;
+    display: block;
+    border-radius: 220.5px;
+    width: 200px;
 }
-
+.work_block{
+	margin-top: 10px;
+	text-align: center;
+	color: #4a4a4a;
+	font-size: 14px;
+	line-height: 30px;
+	font-family: times, serif;  font-style:italic;
+	text-shadow: 4px 4px 15px rgb(157, 151, 147);
+}
 
 .carousel_2{
 	width: 50% !important;
@@ -263,7 +269,7 @@ img{
 	font-size: 15px;
 }
 .title_2{
-	color: #339996;
+	color: #624b1c;
 	font-size: 15px;
 }
 .title_3{
@@ -314,6 +320,13 @@ img{
     border:1px solid #a4707071;
 	margin-bottom: 20px;
 }
+
+.width_30{
+	width: 30%;
+}
+.width_70{
+	width: 70%;
+}
 /* end共通 */
 
 
@@ -336,6 +349,9 @@ img{
 	}
 	.lar_70{
 		width: 70%;
+	}
+	.lar_85{
+		width: 85%;
 	}
 	.lm_180{
 		width: 80%;
@@ -381,19 +397,93 @@ img{
 	.tin_95{
 		width: 95%;
 	}
+	.tin_70{
+		width: 70%;
+	}
 }
 
 /* end裝置變化 */
 
 
-/* 實習生 */
-/*end 實習生 */
+/* ----------------實習生---------------- */
+@media (min-width:790px) {	/* 大 */
+	.university_block{
+		float:left; 
+		width: 50%;
+		padding: 10px;
+	}
+} 
+@media (max-width:790px) {  /* 小 */
+	.university_block{
+		float:left; 
+		width: 100%;
+	}
+	.flex_col{
+		flex-direction: column;
+	}
+}
+
+.Activity{
+	width: 83%;
+    margin: auto;
+	padding: 10px 10px 10px 10px;
+}
+.The_content{
+    margin: auto;
+	padding: 10px 10px 10px 10px;
+}
+.about_Skill_img{
+	width: 200px;
+	align-items: center;
+}
+.the_university{
+	width: 90%;
+    margin: 0 auto;
+    margin-top: 0;
+    background-color: #fff;
+    -webkit-box-shadow: 0 8px 7px 3px rgba(0,0,0,.31);
+    -moz-box-shadow: 0 8px 7px 3px rgba(0,0,0,.31);
+    box-shadow: 0 1px 8px 3px rgba(0,0,0,.31);
+    padding: 10px;
+    margin-top: 30px;
+	margin-bottom: 10px;
+    display: flex;
+	border: 1px solid #efefef;
+}
+.university_img{
+	aspect-ratio: 4 / 3; 
+	width: 100%;
+	overflow: hidden;
+	height:100%;
+	object-fit: cover;
+	object-position: center;
+}
+.university_title{
+	letter-spacing: 7px;
+	line-height: 40px !important;
+	text-align: center;
+}
 
 
-/* 公司介紹 */
+/*----------------end 實習生---------------- */
+
+
+/* ----------------公司介紹---------------- */
 
 /* 公司簡介 */
 
+.company_img{
+	object-position: center center; 
+	object-fit: scale-down;
+	display: block;
+	height: 15vw;
+	margin: 10px auto 10px auto;
+	background-repeat: no-repeat;
+	max-height: 350px;
+	min-height: 170px;
+	border-radius: 5px;
+	padding: 0 10px 25px 10px;
+}
 .collapsed.company_item_title{
 	color: #747a99;
 }
@@ -420,6 +510,10 @@ img{
 	border-radius: 5px;
 	margin-bottom:40PX ;
 }
+.company_fa_block img{
+	width:40px;
+}
+
 /* 1. */
 /* 2. */
 
@@ -454,13 +548,7 @@ img{
 	display: flex;
 	width: 160px;
 }
-
-
-
 /* 3. */
-
-
-
 .company_fa{
 	display: flex; 
 	height: 120px; 
@@ -479,18 +567,13 @@ color: #997485;
 	color: #517078;
 }
 .company_fa_block{
+	color: #495F82;
 	width: fit-content;
 	margin:5px;
 	padding: 5px;
 	display: flex;
     flex-direction: column;
     align-items: center;
-}
-.company_fa_block img{
-	width:40px;
-}
-.company_fa_block{
-	color: #495F82;
 }
 
 /* canvas */
@@ -553,10 +636,10 @@ color: #997485;
 
 
 /* 工作內容 */
-/*end 工作內容 */
+/*----------------end 工作內容---------------- */
 
 
-/* 實習心得 */
+/*---------------- 實習心得---------------- */
 .Internship_experience_more{
 	color: #7d5959;
 	font-weight: 600;
@@ -567,10 +650,11 @@ color: #997485;
 .Memoirs{
 	padding-top: 27px;
 	margin: auto;
-	border: 1px solid; 
+	border: 2px solid #bbbbd3; 
 	height: 320px; 
 	max-width: 700px;
 	border-radius: 20px;
+	background: linear-gradient(45deg, #fafaf0, #feefef);;
 }
 .Memoirs_block{
 	text-align: center;
@@ -582,12 +666,12 @@ color: #997485;
 	border-radius: 5px;
 	overflow: hidden;
 }
-.day_section{
+.work_section{
 	border: 1px solid #7b6b6b;
 	border-radius: 17px;
 	padding: 10px 20px;
 }
-.day_container{
+.work_container{
 	background: url(img/內容/Day_1.png);
 	background-size: Contain;  
 	background-repeat: no-repeat;
@@ -608,13 +692,13 @@ color: #997485;
 	justify-content: center;
 	/* align-items: center; */
 }
-.day_container {
+.work_container {
 	height: 20px;
 	margin: 20px;
 	display: inline-table;
 	align-items: center;
 }
-.day_con{
+.work_con{
 	margin: 20px;
 	text-align: center;
 }
@@ -623,11 +707,7 @@ color: #997485;
 	overflow-x: auto; /* 添加这一行 */
 }
 
-/*end 實習心得 */
-
-
-
-/* canvas */
+/*----------------end 實習心得---------------- */
 .cooperate_img{
 	aspect-ratio: 4/3;
 	object-fit: cover;
@@ -667,12 +747,6 @@ color: #997485;
 	width: 20%;
 	
 }
-.width_30{
-	width: 30%;
-}
-.width_70{
-	width: 70%;
-}
 .about_Skill_3{
 	float:left; 
 	width: 26%;
@@ -697,8 +771,9 @@ color: #997485;
 .box_main {
     width: 100%;
     float: left;
-    background-color: rgb(255 240 240);
+    background-color: rgb(249, 243, 243);
     height: auto;
+	border-radius: 15px;
     padding: 0px 10px 0px 10px;
 	height:300px ;
 }
@@ -713,135 +788,26 @@ color: #997485;
 .readable_text {
     float: left;
     color: #0c0b0e;
-    margin: 0 25px;
 	
 }
 
-@media (min-width:790px) {	/* 大 */
-	.about_Activity_5{
 
-		float:left; 
-		width: 50%;
-		padding: 10px;
-	}
-} 
-@media (max-width:790px) {  /* 小 */
-	.about_Activity_5{
-		float:left; 
-		width: 100%;
-	}
-	.flex_col{
-		flex-direction: column;
-	}
-	.container_Activit{
-		width: 70%;
-		margin: auto;
-	}
-}
 
-@media (max-width:560px) {  /* 小 */
-	.container_Activit{
-		width: 100%;
-		margin: auto;
-	}
-	
-}
-.day_block{
-	aspect-ratio: 4 / 3; 
-	object-position: center center;
-    display: block;
-    border-radius: 220.5px;
-    width: 200px;
-}
-.day_block{
-	margin-top: 10px;
-	text-align: center;
-	color: #4a4a4a;
-	font-size: 14px;
-	line-height: 30px;
-	font-family: times, serif;  font-style:italic;
-	text-shadow: 4px 4px 15px rgb(157, 151, 147);
-}
-.Activity{
-	width: 83%;
-    margin: auto;
-	padding: 10px 10px 10px 10px;
-}
-.The_content{
-    margin: auto;
-	padding: 10px 10px 10px 10px;
-}
-.the_video{
-	width: fit-content;
-    margin: auto;
-}
-.about_Skill_img{
-	width: 200px;
-	align-items: center;
-}
 
-.The_about_Activity{
-	width: 90%;
-    margin: 0 auto;
-    margin-top: 0;
-    background-color: #fff;
-    -webkit-box-shadow: 0 8px 7px 3px rgba(0,0,0,.31);
-    -moz-box-shadow: 0 8px 7px 3px rgba(0,0,0,.31);
-    box-shadow: 0 1px 8px 3px rgba(0,0,0,.31);
-    padding: 10px;
-    margin-top: 30px;
-	margin-bottom: 10px;
-    display: flex;
-	border: 1px solid #efefef;
-}
-.carousel_1{
-	width: 10% !important;
-	opacity: .3 !important;
-}
-.The_about_img{
-	aspect-ratio: 4 / 3; 
-	width: 100%;
-	overflow: hidden;
-	height:100%;
-	object-fit: cover;
-	object-position: center;
-}
 .icon_1{
     color: #000;
     border: solid;
     text-rendering: auto;
     padding: 10px;
     border-radius: 55px;
-	
 }
-.company_img{
-	object-position: center center; 
-	object-fit: scale-down;
-	display: block;
-	height: 15vw;
-	margin: 10px auto 10px auto;
-	background-repeat: no-repeat;
-	max-height: 350px;
-	min-height: 170px;
-	border-radius: 5px;
-	padding: 0 10px 25px 10px;
+.carousel_1{
+	width: 10% !important;
+	opacity: .3 !important;
 }
 
+
 /* ========= */
-.company_lt{
-	width: 90%;
-	margin:0px auto 8px auto;
-}
-.company_rt{
-	width: 100%;
-	margin: 0 auto 10px auto;
-	padding: 10px;
-	border-radius: 15px;
-	overflow-x: auto;
-	display: flex;
-	border: 1px solid #fff;
-	background-color: #fef1ec;
-}
 
 .footer{
 	margin-top: 40px;

@@ -69,6 +69,8 @@ $(document).ready(function(){
       }
     }
   });
+
+  // 主選項打開副選項
   let ajax_cooperate=document.querySelector(".ajax_cooperate");
   $.ajax({
     url:"cooperate.json",
@@ -119,62 +121,62 @@ $(document).ready(function(){
   }	
 
    // 主選項打開副選項
-  let day_option= document.getElementsByClassName("day_options");
-  let day_container = document.getElementsByClassName("day_container"); 
-  day_container[0].style.color= "#efefef"; 
+  let work_option= document.getElementsByClassName("work_options");
+  let work_container = document.getElementsByClassName("work_container"); 
+  work_container[0].style.color= "#efefef"; 
   
-  $(".day_options").on("click",function(){
+  $(".work_options").on("click",function(){
     let value1 = $(this).attr("value");
-    day_options(value1);
+    work_options(value1);
 
-    dayContainers.forEach(dayContainer => {
+    workContainers.forEach(workContainer => {
     const containerRect = document.querySelector('.Slide_leftright').getBoundingClientRect();
     var currentScrollLeft = $('#marker').scrollLeft();
-    var targetOffset = $(".day_container[value='"+value1+"']").offset().left;
+    var targetOffset = $(".work_container[value='"+value1+"']").offset().left;
     
     var ans=currentScrollLeft-containerRect.left+targetOffset-42;
     $('#marker').animate({scrollLeft: ans}, 500);
     });
   });
   const container = $('.Slide_leftright');
-  const dayContainers = document.querySelectorAll('.day_container');
+  const workContainers = document.querySelectorAll('.work_container');
 
   //滑動位置顯示上色
-  function day_showelementor() {
+  function work_showelementor() {
     const valuesArray = [];
-      dayContainers.forEach(dayContainer => {
-          const elementRect = dayContainer.getBoundingClientRect();
+    workContainers.forEach(workContainer => {
+          const elementRect = workContainer.getBoundingClientRect();
           const containerRect = document.querySelector('.Slide_leftright').getBoundingClientRect();
           if (
               elementRect.left<= containerRect.right-40 &&
               elementRect.left>= containerRect.left-90
           ) {
-            let value = dayContainer.getAttribute("value");
+            let value = workContainer.getAttribute("value");
             let numericValue = parseInt(value, 10);
             valuesArray.push(numericValue );
           } 
       });
-      day_options(...valuesArray);
+      work_options(...valuesArray);
   }
 //點擊標題位置顯示上色
-  function day_options(value1,value2) { 
+  function work_options(value1,value2) { 
     let i;
-    for (i = 0; i < day_container.length; i++) { 
-      day_option[i].style.color="#D7D0D0"; 
+    for (i = 0; i < work_container.length; i++) { 
+      work_option[i].style.color="#D7D0D0"; 
       }
     if (value1 !== undefined && value1 !== null) {
-      day_option[value1].style.color="#474032";
+      work_option[value1].style.color="#474032";
     }
     if (value2 !== undefined && value2 !== null) {
-      day_option[value2].style.color = "#474032";
+      work_option[value2].style.color = "#474032";
     }
   }	
 // 添加点击事件监听器到容器
   container.click(function() {
-    day_showelementor();
+    work_showelementor();
   });
   $('#marker').scroll(function() {
-    day_showelementor();
+    work_showelementor();
   });
 
   $(".Internship_experience_more").click(function(){
