@@ -63,8 +63,8 @@ $(document).ready(function(){
     url:"Activity.json",
     success:function(result){
       for(let i=16;i<20;i++){
-        Activity_4.innerHTML+="<div class='row'><div class='col-4'><p>"+
-      result[i]['time']+"</p></div><div class='col-8'><p>"+
+        Activity_4.innerHTML+="<div class='row'><div class='col-3'><p>"+
+      result[i]['time']+"</p></div><div class='col-9'><p>"+
       result[i]['name']+"</p></div></div>"
       }
     }

@@ -164,6 +164,9 @@ img{
 	width: 300px;
 	margin: 10px;
 }
+.text_nowrap{
+	white-space:nowrap
+}
 /* -----------------about_me  end----------------- */
 /* ------------控制------------ */
 /* 主選 */
