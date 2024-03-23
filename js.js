@@ -107,17 +107,18 @@ $(document).ready(function(){
     Main_options(num);
     $(".Main_options").animate({scrollTop:0},10)
   });
-
+ // 主選項樣式
   function Main_options(num) { 
     let i;
     for (i = 0; i < Secondary.length; i++) {
       Secondary[i].style.display = "none";
       Main_option[i].style.color="#A6A6A6"; 
-      
     }
     Secondary[num].style.display = "block";
     Main_option[num].style.color="#474032";
   }	
+
+   // 主選項打開副選項
   let day_option= document.getElementsByClassName("day_options");
   let day_container = document.getElementsByClassName("day_container"); 
   day_container[0].style.color= "#efefef"; 
@@ -127,53 +128,47 @@ $(document).ready(function(){
     day_options(value1);
 
     dayContainers.forEach(dayContainer => {
-      const containerRect = document.querySelector('.Slide_leftright').getBoundingClientRect();
-
-
+    const containerRect = document.querySelector('.Slide_leftright').getBoundingClientRect();
     var currentScrollLeft = $('#marker').scrollLeft();
     var targetOffset = $(".day_container[value='"+value1+"']").offset().left;
-    // var ans=currentScrollLeft-containerRect.left+targetOffset;
-    var ans=currentScrollLeft-containerRect.left+targetOffset;
-
+    
+    var ans=currentScrollLeft-containerRect.left+targetOffset-42;
     $('#marker').animate({scrollLeft: ans}, 500);
     });
   });
   const container = $('.Slide_leftright');
   const dayContainers = document.querySelectorAll('.day_container');
 
-  
-
-
-function day_showelementor() {
-  const valuesArray = [];
-    dayContainers.forEach(dayContainer => {
-        const elementRect = dayContainer.getBoundingClientRect();
-        const containerRect = document.querySelector('.Slide_leftright').getBoundingClientRect();
-    
-        if (
-            elementRect.left<= containerRect.right-40 &&
-            elementRect.left>= containerRect.left-90
-        ) {
-
-          let value = dayContainer.getAttribute("value");
-          let numericValue = parseInt(value, 10);
-          valuesArray.push(numericValue );
-        } 
-    });
-    day_options(...valuesArray);
-}
-function day_options(value1,value2) { 
-  let i;
-  for (i = 0; i < day_container.length; i++) { 
-    day_option[i].style.color="#D7D0D0"; 
+  //滑動位置顯示上色
+  function day_showelementor() {
+    const valuesArray = [];
+      dayContainers.forEach(dayContainer => {
+          const elementRect = dayContainer.getBoundingClientRect();
+          const containerRect = document.querySelector('.Slide_leftright').getBoundingClientRect();
+          if (
+              elementRect.left<= containerRect.right-40 &&
+              elementRect.left>= containerRect.left-90
+          ) {
+            let value = dayContainer.getAttribute("value");
+            let numericValue = parseInt(value, 10);
+            valuesArray.push(numericValue );
+          } 
+      });
+      day_options(...valuesArray);
+  }
+//點擊標題位置顯示上色
+  function day_options(value1,value2) { 
+    let i;
+    for (i = 0; i < day_container.length; i++) { 
+      day_option[i].style.color="#D7D0D0"; 
+      }
+    if (value1 !== undefined && value1 !== null) {
+      day_option[value1].style.color="#474032";
     }
-  if (value1 !== undefined && value1 !== null) {
-    day_option[value1].style.color="#474032";
-  }
-  if (value2 !== undefined && value2 !== null) {
-    day_option[value2].style.color = "#474032";
-  }
-}	
+    if (value2 !== undefined && value2 !== null) {
+      day_option[value2].style.color = "#474032";
+    }
+  }	
 // 添加点击事件监听器到容器
   container.click(function() {
     day_showelementor();
@@ -182,7 +177,9 @@ function day_options(value1,value2) {
     day_showelementor();
   });
 
-
+  $(".Internship_experience_more").click(function(){
+    $(".Internship_experience_else").slideToggle("slow");
+  });
 
   // 置頂按鈕
   $(function(){
