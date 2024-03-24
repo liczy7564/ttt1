@@ -137,19 +137,19 @@ img{
 	background:url(img/main/首圖phone.png) ;
 	aspect-ratio:5/ 4;
 	
-			object-fit: cover;
-			background-size: contain;
+	object-fit: cover;
+	background-size: contain;
 			
-			background-repeat:no-repeat ;
-			background-size: cover; /* 让背景图片填充整个元素 */
-  background-position: center;
+	background-repeat:no-repeat ;
+	background-size: cover; /* 让背景图片填充整个元素 */
+  	background-position: center;
 }
 .zz{
 	display: flex;
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
-	padding-left: 20px;
+	padding-left: 30px;
 }
 /* -----------icon END---------*/
 /* -------------------about_me----------------- */
