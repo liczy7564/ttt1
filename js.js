@@ -5,7 +5,7 @@ $(document).ready(function(){
     url:"證照.json",
     success:function(result){
       for(let i=0;i<result.length;i++){
-      container_Certifications.innerHTML+="<div class='about_Skill_5'><p>"+
+      container_Certifications.innerHTML+="<div class='about_Skill_5 .mar_auto'><p>"+
       result[i]['name']+"</p></div><div class='about_Skill_2 text_center'><p>"+
       result[i]['wh']+"</p></div><div class='about_Skill_3 text_center'><p>"+
       result[i]['date']+"</p></div>"
@@ -18,7 +18,7 @@ $(document).ready(function(){
     url:"skill.json",
     success:function(result){
       for(let i=0;i<result.length;i++){
-      Skill.innerHTML+="<div class='about_Skill_3'><p>"+
+      Skill.innerHTML+="<div class='about_Skill_3 .mar_auto'><p>"+
       result[i]['name']+"</p></div><div class='about_Skill_4 text_center'><p>"+
       result[i]['what']+"</p></div><div class='about_Skill_3'><p>"+
       result[i]['about']+"</p></div>"
@@ -184,9 +184,19 @@ $(document).ready(function(){
   });
 
   // 置頂按鈕
+
   $(function(){
-    $(".top-Anchor").click(function(event){
-      $("html,body").animate({scrollTop:0},10);
+    $('.top-Anchor').click(function(){ 
+      $('html,body').animate({scrollTop:0}, 333);
     });
-  })
+    $(window).scroll(function() {
+      if ( $(this).scrollTop() > 300 ){
+        $(".top-Anchor").fadeIn(222);
+      } else {
+        $(".top-Anchor").stop().fadeOut(222);
+      }
+    }).scroll();
+  });
+
+
 });
