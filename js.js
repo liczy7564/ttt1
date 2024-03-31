@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    // Skill程式
+    //證照 Skill
   let container_Certifications=document.querySelector(".container_Certifications");
   $.ajax({
     url:"證照.json",
@@ -25,6 +25,7 @@ $(document).ready(function(){
       }
     }
   });
+  // 大學經歷
   let Activity_1=document.querySelector(".container_Activity_1");
   $.ajax({
     url:"Activity.json",

@@ -23,6 +23,47 @@ a{
 	color: #B8A364;
 	text-decoration: none;
 }
+@media (min-width:700px) {	/* 大 */
+	p{
+		color: #475059; 
+		font-size: 16px;
+		margin: 0px;
+	}
+	.text{
+	  line-height: 30px;
+	  font-size: 16px;
+	}
+	h4{
+		font-size: 20px;
+	}
+	h5{
+		font-size: 20px;
+	  }
+	h6{
+		font-size: 20px;
+	}
+} 
+@media (max-width:700px) { 
+	p{
+		color: #475059; 
+		font-size: 14px;
+		margin: 0px;
+	}
+	.text{
+	  line-height: 24px;
+	  font-size: 14px;
+	}
+	h4{
+		font-size: 16px;
+	}
+	h5{
+		font-size: 16px;
+	  }
+	h6{
+		font-size: 16px;
+	}
+}
+
 h1 {
 	font-size: 30px;
 	line-height: 40px;
@@ -40,34 +81,21 @@ h3{
 	vertical-align: middle;
 }
 h4{
-	font-size: 120%;
-	font-weight: 800px;
-  	color: #B7A99C;
+  	color: #604b38;
   	text-align: center;
 }
 h5{
-	color: #747a99; 
-	font-size: 16px;
+	color: #998074; 
 	margin: 0px;
 	line-height: 25px;
   }
 h6{
-	font-size: 20px;
 	padding-bottom: 7px;
 	padding-top: 10px;
 	color: #8a6c6ac7;
 	margin: auto;
 	text-align: center;
 	font-weight:500 ;
-}
-p{
-	color: #475059; 
-	font-size: 14px;
-	margin: 0px;
-}
-.text{
-  line-height: 24px;
-  font-size: 14px;
 }
 img{
 	margin: auto;
@@ -95,27 +123,9 @@ img{
 		display: none;
 	}
 			/* 大消失 */
-	.Mdis{
-		display: none;
-	}
-	.text_text_left_center{
-		text-align: left;
-		width: 80%;
-	}
 
 }
-@media (max-width:600px) {/* 小 */
-	
-	.sdis{/* 小消失 */
-		display: none;
-	}
-	.text_left_center{
-		text-align: center;
-		width: 90%;
-		margin: auto;
-	}
 
-} 
 
 /* -----------icon ---------*/
 .top-Anchor{
@@ -123,7 +133,7 @@ img{
 	bottom: 20px;
 	right: 24px;
 	z-index: 100;
-	color: #E8A399;
+	color: #6c6a6a;
 	padding: 0px;
 	opacity: 0.2;
 	font-size: 2.8em;
@@ -131,7 +141,7 @@ img{
 }
 .fa-arrow-circle-up{
 	border-radius: 40.5px;
-	background-color: rgb(255 240 240);
+	background-color: #ffffff;
 }
 .xx{
 	background:url(img/main/首圖phone.png) ;
@@ -153,11 +163,7 @@ img{
 }
 /* -----------icon END---------*/
 /* -------------------about_me----------------- */
-/* .zz{
-	height: 300px;
-	padding: 10px;
-	object-fit: cover;
-} */
+
 @media (min-width:600px) {	/* 大 */
 	.about_me{
 		background: url(img/main/首圖.png);
@@ -193,7 +199,7 @@ img{
 	position: sticky;
 	top: 0px;
 	z-index: 2;
-	background-color: #F2EEEE;
+	background-color: #e9e5e3;
 }
 .Main_options{
 	padding: 7px;
@@ -204,7 +210,7 @@ img{
 	color: #3A3845;
 }
 .Main_options_row :hover{
-	color: #b97674
+	color: #79514f
 }
 /* 次選 */
 .Secondary{
@@ -224,11 +230,11 @@ img{
 	color: #8D8D8D;
 }
 .Secondary_container :hover{
-	color: #800000;
+	color: v;
 	font-weight: 700;
 }
 .Secondary_options:hover{
-	border-bottom:3px solid #A82124;
+	border-bottom:3px solid #dac7c7;
 }
 .Secondary_options{
 	width: 100%;
@@ -237,8 +243,8 @@ img{
 }
 .Secondary_options.active{
 	text-decoration: none;
-	color: #921414;
-	border-bottom: solid 3px #921414;
+	color: #dac7c7;
+	border-bottom: solid 3px #dac7c7;
 }
 /* 實習日常 */
 .work_row{
@@ -282,7 +288,7 @@ img{
 
 /* 共通 */
 .theme_title{
-	font-size: 140%;
+	float:  inherit;
 	margin: 100px 0px 15px 0px;
 	padding: -100px 0px 0px 0px;
 }
@@ -310,6 +316,7 @@ img{
 }
 
 .theme{
+	
 	position: relative;
 	padding: 15px 15px 50px 15px;
 	margin: -100px auto auto auto;
@@ -338,7 +345,7 @@ img{
 .mar_10{
 	margin: 10px;
 }
-.imgbox{
+.about_motivation_imgbox{
     border:1px solid #a4707071;
 	margin-bottom: 20px;
 }
@@ -358,11 +365,7 @@ img{
 
 /* 裝置變化 */
 @media (min-width:600px) {	/* 大 */
-	.readable_text p{
-		font-size: 14px;
-		line-height: 26px;
-		white-space:nowrap;
-	}
+
 	.lar_left{
 		float: left;
 	}
@@ -399,10 +402,6 @@ img{
 	}
 } 
 @media (max-width:600px) {  /* 小 */
-	.readable_text p{
-		font-size: 13px;
-		white-space:nowrap;
-	}
 	.lm_170{
 		width: 100%;
 	}
@@ -412,7 +411,7 @@ img{
 		margin-right: -5%;
 		padding-left:5%;
 	}
-	.tin_bor{
+	.tin_solid{
 		border:1px solid #efefef;
 	}
 	.tin_dis_flex{
@@ -435,6 +434,7 @@ img{
 		float:left; 
 		width: 50%;
 		padding: 10px;
+		margin: auto;
 	}
 	
 } 
@@ -447,23 +447,96 @@ img{
 		flex-direction: column;
 	}
 	.university_card{
-		
-    height: 178px;
+    	height: 178px;
 	}
 }
-
-.Activity{
-	width: 83%;
-    margin: auto;
-	padding: 10px 10px 10px 10px;
+.about_me_img{
+	width: 100%; 
+	border-radius: 200px;
 }
+.cooperate_img{
+	aspect-ratio: 4/3;
+	object-fit: cover;
+	display: flex;
+	border-radius: 12px;
+}
+.about_motivation_box_text{
+	padding: 18px;
+	/* margin: auto;
+    min-height: 170px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center; */
+}
+.The_boon_content{
+	border: 1px solid #efefef;
+	padding:15px 10px;
+	height: 170px;
+	margin: 5px;
+}
+/* 證照 */
+.image_3 {
+    width: 100px;
+    float: left;
+    background-image: url(img/img-3.png);
+    height: 94px;
+    background-repeat: no-repeat;
+    top: -40px;
+    position: relative;
+	margin-bottom: -20px;
+}
+.about_Skill_5{
+	float:left; 
+	width: 54%;
+}
+.about_Skill_2{
+	float:left; 
+	width: 20%;
+	
+}
+.about_Skill_3{
+	float:left; 
+	width: 26%;
+}
+.about_Skill_4{
+	float:left; 
+	width: 36%;
+}
+.about_Skill_33{
+	float:left; 
+	width: 33%;
+}
+.box_section{
+	padding:42px 0px 0px 0px ;
+	margin-top:-10x ;
+
+}
+.container_Skill{
+	width: auto;
+	margin: auto;
+}
+.box_main {
+    width: 100%;
+    float: left;
+    background-color: #f9f3f3;
+	border-radius: 15px;
+    padding: 0px 10px 0px 10px;
+	height:300px ;
+}
+.consultative_text {
+    width: 100%;
+    text-align: left;
+	line-height: 40px;
+}
+.readable_text {
+    float: left;
+    color: #0c0b0e;
+}
+/* ////   */
 .The_content{
     margin: auto;
 	padding: 10px 10px 10px 10px;
-}
-.about_Skill_img{
-	width: 200px;
-	align-items: center;
 }
 .the_university{
 	width: 90%;
@@ -513,19 +586,15 @@ img{
 	border-radius: 5px;
 	padding: 0 10px 25px 10px;
 }
-.collapsed.company_item_title{
-	color: #747a99;
-}
 .collapsed.company_item_title::before{
 	content: none;
 }
 .company_item_title{
 	width: 100%;
     padding: 10px;
-    border: 1px solid #efefef;
+    border: 1px solid #f1e9e5;
     border-radius: 5px;
-    background: #e6dddd40;
-	color: #997485;
+    background:#fffcfb;
 }
 .company_item_title::before{
 	content: '◇';
@@ -584,7 +653,6 @@ img{
 	overflow-x: auto;
 }
 .company_fa_icon{
-	font-weight: 900;
 font-size: 33px;
 margin: 10px;
 color: #997485;
@@ -664,8 +732,7 @@ color: #997485;
 /*end 公司介紹 */
 
 
-/* 工作內容 */
-/*----------------end 工作內容---------------- */
+/*---------------實習內容---------------- */
 
 
 /*---------------- 實習心得---------------- */
@@ -737,91 +804,6 @@ color: #997485;
 }
 
 /*----------------end 實習心得---------------- */
-.cooperate_img{
-	aspect-ratio: 4/3;
-	object-fit: cover;
-	display: flex;
-	border-radius: 12px;
-}
-.box_text{
-	padding: 18px;
-	margin: auto;
-    min-height: 170px;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: center;
-}
-.The_boon_content{
-	border: 1px solid #efefef;
-	padding:15px 10px;
-	height: 170px;
-	margin: 5px;
-}
-.image_3 {
-    width: 100px;
-    float: left;
-    background-image: url(img/img-3.png);
-    height: 94px;
-    background-repeat: no-repeat;
-    top: -40px;
-    position: relative;
-}
-.about_Skill_5{
-	float:left; 
-	width: 54%;
-}
-.about_Skill_2{
-	float:left; 
-	width: 20%;
-	
-}
-.about_Skill_3{
-	float:left; 
-	width: 26%;
-}
-.about_Skill_4{
-	float:left; 
-	width: 36%;
-}
-.about_Skill_33{
-	float:left; 
-	width: 33%;
-}
-.box_section{
-	padding:42px 0px 0px 0px ;
-	margin-top:-10x ;
-
-}
-.container_Skill{
-	width: auto;
-	margin: auto;
-}
-.box_main {
-    width: 100%;
-    float: left;
-    background-color: rgb(249, 243, 243);
-    height: auto;
-	border-radius: 15px;
-    padding: 0px 10px 0px 10px;
-	height:300px ;
-}
-.consultative_text {
-    width: 100%;
-    text-align: left;
-	line-height: 40px;
-    color: #0c0b0e;
-    font-size: 22px;
-    font-weight: 600;
-}
-.readable_text {
-    float: left;
-    color: #0c0b0e;
-	
-}
-
-
-
 
 .icon_1{
     color: #000;
@@ -843,6 +825,6 @@ color: #997485;
 	text-align: center;
 	padding: 18px;
 	font-size: 15px;
-	height: 90px; /*設定footer本身高度*/
-	background-color: rgb(255 240 240);
+	height: 90px;
+	background-color: #e9e5e3;
 }
