@@ -34,7 +34,7 @@ a{
 	  font-size: 16px;
 	}
 	h4{
-		font-size: 20px;
+		font-size: 22px;
 	}
 	h5{
 		font-size: 20px;
@@ -54,7 +54,7 @@ a{
 	  font-size: 14px;
 	}
 	h4{
-		font-size: 16px;
+		font-size: 18px;
 	}
 	h5{
 		font-size: 16px;
@@ -199,7 +199,7 @@ img{
 	position: sticky;
 	top: 0px;
 	z-index: 2;
-	background-color: #e9e5e3;
+	background-color: #f5eeea;
 }
 .Main_options{
 	padding: 7px;
@@ -288,7 +288,6 @@ img{
 
 /* 共通 */
 .theme_title{
-	float:  inherit;
 	margin: 100px 0px 15px 0px;
 	padding: -100px 0px 0px 0px;
 }
@@ -519,7 +518,7 @@ img{
 .box_main {
     width: 100%;
     float: left;
-    background-color: #f9f3f3;
+    background-color: #f5eeea;
 	border-radius: 15px;
     padding: 0px 10px 0px 10px;
 	height:300px ;
@@ -826,5 +825,5 @@ color: #997485;
 	padding: 18px;
 	font-size: 15px;
 	height: 90px;
-	background-color: #e9e5e3;
+	background-color: f5eeea;
 }
